@@ -11,17 +11,17 @@ using std::cout;
 
 class Solution {
 public:
-static bool containsDuplicate(vector<int>& nums) {
-    unordered_set<int> set;
+    static bool containsDuplicate(vector<int>& nums) {
+        unordered_set<int> set;
 
-    for(auto& n : nums) {
-        if(set.count(n))
-            return true;
+        for(auto& n : nums) {
+            if(set.count(n))
+                return true;
 
-        set.insert(n);
+            set.insert(n);
+        }
+        return false;
     }
-    return false;
-}
 };
 
 int main() {

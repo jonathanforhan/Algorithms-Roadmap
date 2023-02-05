@@ -11,17 +11,17 @@ using std::unordered_map;
 
 class Solution {
 public:
-static vector<int> twoSum(const vector<int>& nums, int target) {
-    unordered_map<int, int> map;
+    static vector<int> twoSum(const vector<int>& nums, int target) {
+        unordered_map<int, int> map;
 
-    for(int i = 0; i < nums.size(); i++) {
-        if(map.find(nums[i]) != map.end()) {
-            return { i, map[nums[i]] };
+        for(int i = 0; i < nums.size(); i++) {
+            if(map.find(nums[i]) != map.end()) {
+                return { i, map[nums[i]] };
+            }
+            map[target - nums[i]] = i;
         }
-        map[target - nums[i]] = i;
+        return {};
     }
-    return {};
-}
 };
 
 int main() {
