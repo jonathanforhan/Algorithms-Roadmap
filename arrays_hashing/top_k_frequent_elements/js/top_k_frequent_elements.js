@@ -38,4 +38,5 @@ const topKFrequent = (nums, k) => {
 
   return result;
 };
+
 console.log(topKFrequent(nums, k));
