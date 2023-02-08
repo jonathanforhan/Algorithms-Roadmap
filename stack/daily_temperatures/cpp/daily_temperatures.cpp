@@ -8,6 +8,9 @@ using std::vector;
 using std::stack;
 using std::pair;
 
+// Time O(n)
+// Space O(n)
+
 class Solution {
 public:
     static vector<int> dailyTemperatures(const vector<int>& temps) {
